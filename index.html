@@ -9,60 +9,74 @@
 <body>
     <div class="blur-background"></div>
     
-    <!-- Header/Title -->
-    <header class="header">
-        <h1 class="title">rustyUFO</h1>
-        <p class="subtitle">Hip Hop • Kenyan Music • Dancer</p>
-    </header>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <div class="logo">UFO</div>
+            <h2 class="brand-name">rustyUFO</h2>
+            <p class="brand-subtitle">Community Streamer</p>
+        </div>
+    </aside>
 
-    <!-- Main Container -->
-    <main class="container">
-        <!-- Boxes Section -->
-        <section class="boxes-section">
-            <!-- Streams Box -->
-            <div class="box streams-box" id="streamsBox">
-                <div class="box-content">
-                    <h2>🎥 Streams</h2>
-                    <p>Watch me live</p>
-                    <div class="links-list">
-                        <a href="#" class="link-item">Twitch</a>
-                        <a href="#" class="link-item">Kick</a>
-                        <a href="#" class="link-item">YouTube</a>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Navigation/Home Loop -->
+        <nav class="nav-top">
+            <a href="#home" class="nav-link active">Loop Home</a>
+            <a href="#streams" class="nav-link">Streams</a>
+            <a href="#socials" class="nav-link">Socials</a>
+        </nav>
+
+        <!-- Home Page Section -->
+        <section id="home" class="home-section">
+            <!-- Top Box: Social Links -->
+            <div class="boxes-grid top-section">
+                <div class="box social-links-box" id="socialsBox">
+                    <div class="box-content">
+                        <h2>Social Links</h2>
+                        <div class="links-list">
+                            <a href="#" class="link-item">Instagram</a>
+                            <a href="#" class="link-item">Twitter</a>
+                            <a href="#" class="link-item">TikTok</a>
+                            <a href="#" class="link-item">YouTube</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Socials Box -->
-            <div class="box socials-box" id="socialsBox">
-                <div class="box-content">
-                    <h2>📱 Socials</h2>
-                    <p>Follow me everywhere</p>
-                    <div class="links-list">
-                        <a href="#" class="link-item">Instagram</a>
-                        <a href="#" class="link-item">Twitter</a>
-                        <a href="#" class="link-item">TikTok</a>
-                        <a href="#" class="link-item">YouTube</a>
+            <!-- Bottom Two Boxes: Streams & Hire Me -->
+            <div class="boxes-grid bottom-section">
+                <!-- Streams Box -->
+                <div class="box streams-box" id="streamsBox">
+                    <div class="box-content">
+                        <h2>Streams</h2>
+                        <p>Watch me live</p>
+                        <div class="links-list">
+                            <a href="#" class="link-item">Twitch</a>
+                            <a href="#" class="link-item">Kick</a>
+                            <a href="#" class="link-item">YouTube</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Hire Me Box -->
-            <div class="box hire-box" id="hireBox">
-                <div class="box-content">
-                    <h2>✨ Hire Me</h2>
-                    <p>Professional Bookings</p>
-                    <div class="hire-info">
-                        <p class="info-text">Available for events, collaborations & performances</p>
-                        <input type="email" placeholder="Your email" class="email-input">
-                        <button class="contact-btn">Send Inquiry</button>
-                        <p class="calendar-sync">📅 Calendar synced with Samsung Phone</p>
+                <!-- Hire Me Box -->
+                <div class="box hire-box" id="hireBox">
+                    <div class="box-content">
+                        <h2>Hire Me</h2>
+                        <p>Professional Bookings</p>
+                        <div class="hire-info">
+                            <p class="info-text">Available for events, collaborations & performances</p>
+                            <input type="email" placeholder="Your email" class="email-input">
+                            <button class="contact-btn">Send Inquiry</button>
+                            <p class="calendar-sync">📅 Calendar synced</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Dance Styles Section -->
-        <section class="dances-section">
+        <section id="dances" class="dances-section">
             <h2 class="section-title">My Dance Styles</h2>
             <div class="dances-container">
                 <div class="dance-card">
@@ -71,7 +85,7 @@
                     <p>Urban, dynamic, expressive movement</p>
                 </div>
                 <div class="dance-card">
-                    <div class="dance-emoji">🥁</div>
+                    <div class="dance-emoji">🎶</div>
                     <h3>Kenyan Music</h3>
                     <p>Cultural rhythms & traditional vibes</p>
                 </div>
