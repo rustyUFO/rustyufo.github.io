@@ -7,72 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="blur-background"></div>
-    
     <!-- SPLASH SCREEN -->
     <div class="splash-screen" id="splashScreen">
-        <div class="splash-content">
-            <div class="splash-character">🎬👽</div>
-            <h1 class="splash-title">RUSTY<br>UFO</h1>
-            <p class="splash-location">NAIROBI<br>ESTD 2026</p>
-        </div>
+        <img src="Rusty ufo.png" alt="rustyUFO" class="splash-image">
     </div>
     
-    <!-- Right Orange Sidebar -->
-    <aside class="right-sidebar"></aside>
-
-    <!-- Main Content -->
+    <!-- MAIN CONTENT - Using design image as background -->
     <main class="main-content" id="mainContent">
-        <!-- Left Column: Skills & Contact -->
-        <div class="left-column">
-            <div class="skills-section">
-                <p class="skill-item">CINEMATOGRAPHER</p>
-                <p class="skill-item">STREAMER</p>
-                <p class="skill-item">V.EDITOR</p>
-            </div>
-            
-            <div class="contact-section">
-                <h3>CONTACT</h3>
-                <p>UFOOOSRUSTY@GMAIL.COM</p>
-                <p>0791223904</p>
-            </div>
+        <div class="design-background">
+            <img src="2.jpg" alt="rustyUFO Layout" class="layout-image">
         </div>
-
-        <!-- Center Column: Boxes -->
-        <div class="center-column">
-            <!-- Top Row: Streams & Socials -->
-            <div class="boxes-row top-row">
-                <!-- Streams Box -->
-                <div class="box streams-box">
-                    <h2>STREAMS</h2>
-                    <div class="box-icons">
-                        <div class="icon-item">🟣 KICK</div>
-                        <div class="icon-item">▶️ YOUTUBE</div>
-                    </div>
-                </div>
-
-                <!-- Socials Box -->
-                <div class="box socials-box">
-                    <h2>Socials</h2>
-                    <div class="box-icons">
-                        <div class="icon-item">📸 INSTAGRAM</div>
-                        <div class="icon-item">𝕏 TWITTER</div>
-                        <div class="icon-item">▶️ YOUTUBE</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Middle: Hire Me Box -->
-            <div class="box hire-box">
-                <h2>HIRE<span class="exclamation">!</span><span class="spark">✨</span>
-ME<span class="spark2">!</span></h2>
-                <div class="hire-content">
-                    <div class="camera-icon">🎥</div>
-                    <div class="hire-details">
-                        <input type="email" placeholder="Your email" class="email-input">
-                        <button class="send-btn">Send</button>
-                    </div>
-                </div>
+        
+        <!-- Interactive overlay for functionality -->
+        <div class="interactive-overlay">
+            <!-- Streams Box Input Area -->
+            <div class="input-area streams-input"></div>
+            
+            <!-- Socials Box Input Area -->
+            <div class="input-area socials-input"></div>
+            
+            <!-- Hire Me Box Input Area -->
+            <div class="hire-input-area">
+                <input type="email" placeholder="Your email" class="email-input">
+                <button class="send-btn">Send</button>
             </div>
         </div>
     </main>

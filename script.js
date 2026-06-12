@@ -19,6 +19,10 @@ style.textContent = `
         from { opacity: 0; }
         to { opacity: 1; }
     }
+    
+    #mainContent {
+        opacity: 1;
+    }
 `;
 document.head.appendChild(style);
 
