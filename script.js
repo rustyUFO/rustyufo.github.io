@@ -1,3 +1,14 @@
+// Splash screen fade out after 3 seconds
+window.addEventListener('load', function() {
+    const splashScreen = document.getElementById('splashScreen');
+    const mainContent = document.getElementById('mainContent');
+    
+    setTimeout(function() {
+        splashScreen.style.display = 'none';
+        mainContent.style.animation = 'fadeInUp 0.6s ease forwards';
+    }, 3000);
+});
+
 // Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -20,8 +31,7 @@ if (contactBtn) {
     contactBtn.addEventListener('click', function() {
         const email = emailInput.value.trim();
         if (email) {
-            // Here you can add your email sending logic
-            alert(`Inquiry sent from: ${email}`);
+            alert(`Thank you! We'll contact you at: ${email}`);
             emailInput.value = '';
         } else {
             alert('Please enter your email address');
@@ -66,14 +76,4 @@ document.querySelectorAll('.box, .dance-card').forEach(element => {
     observer.observe(element);
 });
 
-// Box click effects
-document.querySelectorAll('.box').forEach(box => {
-    box.addEventListener('click', function() {
-        this.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            this.style.transform = '';
-        }, 100);
-    });
-});
-
-console.log('rustyUFO Portfolio Loaded! 🎨');
+console.log('🚀 rustyUFO Portfolio Loaded!');
