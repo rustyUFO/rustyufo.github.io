@@ -1,39 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rustyUFO - Content Creator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- SPLASH SCREEN -->
-    <div class="splash-screen" id="splashScreen">
-        <img src="Rusty ufo.png" alt="rustyUFO" class="splash-image">
-    </div>
-    
-    <!-- MAIN CONTENT - Using design image as background -->
-    <main class="main-content" id="mainContent">
-        <div class="design-background">
-            <img src="2.jpg" alt="rustyUFO Layout" class="layout-image">
-        </div>
-        
-        <!-- Interactive overlay for functionality -->
-        <div class="interactive-overlay">
-            <!-- Streams Box Input Area -->
-            <div class="input-area streams-input"></div>
-            
-            <!-- Socials Box Input Area -->
-            <div class="input-area socials-input"></div>
-            
-            <!-- Hire Me Box Input Area -->
-            <div class="hire-input-area">
-                <input type="email" placeholder="Your email" class="email-input">
-                <button class="send-btn">Send</button>
-            </div>
-        </div>
-    </main>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rustyUFO - Content Creator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <script src="script.js"></script>
-</body>
-</html>
+    :root {
+      --orange: #e84500;
+      --orange-light: #ff6a1a;
+      --black: #0a0a0a;
+      --dark: #111;
+      --card-bg: #c03900;
+      --text: #fff;
+      --green: #39ff14;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Barlow Condensed', sans-serif;
+      overflow-x: hidden;
+    }
+
+    #splash {
+      position: fixed;
+      inset: 0;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    #splash.hide { opacity: 0; visibility: hidden; }
+    #splash img {
+      width: min(380px, 80vw);
+      animation: splashPulse 0.6s ease-out forwards;
+    }
+    @keyframes splashPulse {
+      0%   { opacity: 0; transform: scale(0.7); }
+      70%  { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    #main {
+      min-height: 100vh;
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+    #main.show { opacity: 1; }
+
+    #main::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #main::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 20% 30%, #3a0a0066 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 70% 60%, #2a050566 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 50% 80%, #1a030366 0%, transparent 80%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .page-wrapper {
+      display: flex;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sidebar {
+      width: 160px;
+      background: var(--orange);
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 10px;
+    }
+    .sidebar-logo { width: 130px; filter: brightness(0) invert(1); opacity: 0.9; }
+    .sidebar-brand {
+      font-family: 'Bebas Neue', sans-serif;
